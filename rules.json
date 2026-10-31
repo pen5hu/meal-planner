@@ -1,0 +1,42 @@
+{
+  "planning_days": 7,
+  "start_day_of_week": "Monday",
+  "meals_per_day": 1,
+  "meal_type": "dinner",
+
+  "data_handling": {
+    "use_only_registered_menus": true,
+    "use_only_registered_ingredients": true,
+    "abort_on_fetch_failure": true
+  },
+
+  "meal_selection": {
+    "avoid_same_menu_within_days": 14,
+    "prefer_ingredient_overlap": true,
+    "consider_nutritional_balance": true,
+    "check_conversation_history": true
+  },
+
+  "shopping_list": {
+    "aggregate_ingredients": true,
+    "normalize_ingredient_names": true,
+    "separate_seasonings": true,
+    "prompt_seasonings_stock_check": true
+  },
+
+  "output": {
+    "language": "ja",
+    "sections": [
+      {
+        "name": "weekly_meals",
+        "title": "献立表",
+        "description": "日付、曜日、メニュー名を一覧で表示する"
+      },
+      {
+        "name": "shopping_list",
+        "title": "買い物リスト",
+        "description": "食材名と調味料を分けて一覧表示する（調味料は別枠で記載し、在庫確認・不足時の購入を促す）"
+      }
+    ]
+  }
+}
